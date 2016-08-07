@@ -1,0 +1,28 @@
+#getting user input
+score = raw_input("Enter a score between 0.0 and 1.0: ")
+#converting user input to float
+x = float(score)
+#You can combine line 2 and 4 like this:
+#score = float(raw_input("Enter a score between 0.0 and 1.0"))
+#Print variables
+a = "A"
+b = "B"
+c = "C"
+d = "D"
+f = "F"
+error = "Please Enter a score between 0.0 and 1.0"
+try:
+	if x > 0.9:
+		print error
+	elif x >= 0.86:
+		print a
+	elif x >= 0.76:
+		print b
+	elif x >= 0.66:
+		print c
+	elif x >= 0.56:
+		print d
+	elif x <= 0.55:
+		print f
+except:
+	print("Enter a score between 0.0 and 1.0")
