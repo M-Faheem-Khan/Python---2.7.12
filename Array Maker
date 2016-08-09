@@ -1,0 +1,25 @@
+###################
+   Python 2.7.12
+###################
+#getting user input
+user_input = raw_input("Enter a number: ")
+
+#just to keep things simple
+quits = "done"
+
+#Empty array
+user_input_array = []
+
+#getting the while loop started
+while user_input != quits: #OR could be written as while x == 'done'
+
+  #Again asking for user input
+	user_input = raw_input("Enter a number: ")
+
+	#Entering all user data
+	user_input_array.append(user_input)
+
+  #Keep asking user to enter data unless done is enterd
+
+#print the array itself
+print(user_input_array)
