@@ -1,2 +1,2 @@
 # Python
-This is a simple file wage calculator made with python.
+This is a simple python directory containing simple small python sinppets :)
