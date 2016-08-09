@@ -1,3 +1,6 @@
+###################
+   Python 2.7.12
+###################
 #getting user input
 score = raw_input("Enter a score between 0.0 and 1.0: ")
 #converting user input to float
