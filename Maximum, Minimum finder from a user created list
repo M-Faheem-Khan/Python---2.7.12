@@ -1,0 +1,21 @@
+###################
+   Python 2.7.12
+###################
+def ask():                                           #creating a ask function
+    user_input_array = []                            #creating an array
+    while True:                                      
+        user_input = raw_input("Enter a number: ")   #getting user input
+        if user_input == 'done':                     #if user input equal done
+            if len(user_input_array) >= 2:           #checking the length of the array if the length is more than or equal 2
+                print("Invalid Input")               
+                print (max(user_input_array))        
+                print (min(user_input_array))        
+                break                                #break
+            if len(user_input_array) < 2:            #again checking the length of the array if the length is less than 2
+                print("Unable to determine")
+        try:                                         #trying to convert all the strings to integers
+            user_input_array.append(int(user_input)) #add the input to the array if it is a integer
+        except ValueError:                           #if unable to convert the string to integer
+            print("Invalid input")
+            continue
+ask()                                                #calling the function ask()
