@@ -1,0 +1,32 @@
+###################
+   Python 2.7.12
+###################
+def bus(name, gender, age):
+	#Creating a new file
+	user_info = open("user_info.txt", "w")
+	#Saving all the arguments to the file
+	user_info.write("Username: " + name + "\n")
+	user_info.write("Gender: " + gender + "\n")
+	user_info.write("Age: " + age + "\n")
+	#Closing file after saving all arguments
+	user_info.close()
+	
+	#Asking user if they want to review the information they have entered
+	user_input = raw_input("Do you want to review your information: ")
+	#If yes then print all info in the file
+	if user_input == "yes":
+		user_info_file = open("user_info.txt", "r")
+		print (user_info_file.read())
+		user_info_file.close()
+
+	#If no the exit the program
+	if user_input == "no":
+		print("GoodBye")
+		quit()
+
+#Variables for arguments
+name = raw_input("Enter username: ")
+gender = raw_input("Enter gender: ")
+age = raw_input("Enter age: ")
+
+bus(name, gender, age)
