@@ -1,0 +1,57 @@
+###################
+   Python 2.7.12
+###################
+#Creating function
+def average():
+    #Array in which we are going to save all the inputs
+    num_list = []
+    #for printing average
+    avg = 'print average'
+    #for counting number of inputs
+    count = 0
+    
+    while True:
+      #getting user input
+        num = raw_input("Enter number: ")
+        #checking if user wants to exit
+        if num == 'exit':
+            print("Goodbye!")
+            #waiting for user to press return/ enter key
+            raw_input("")
+            break
+            
+        #checking if user wants to know the average
+        if num == avg:
+            #checking if the array is empty
+            if len(num_list) <= 1:
+                print("cannot determine")
+            #check if the list has more than 2 value stored
+            if len(num_list) >= 2:
+                #finding the sum of a all values stored in the list
+                list_sum = sum(num_list)
+                
+                #finding the average by dividing the sum of value by the number of inputs
+                #to find the average the sum of the list can also be divided by the length of the list
+                #like so:
+                #list_avg = list_sum / len(num_list)
+                
+                list_avg = list_sum / count
+                print ('Sum of all the number: ', list_sum)
+                print (float(list_avg))
+                break
+      #Checking if all inputs can be converted to a number and can be used to find the average
+      try:
+            #checking if user enter a value
+            if len(num) == 0:
+                print("No number entered!!")
+                continue
+                
+            if len(num) >= 1:
+                num_int = int(num)
+                num_list.append(num_int)
+                count = count + 1
+        except:
+            print("Enter numbers only!!")
+            continue
+#calling the function
+average()
