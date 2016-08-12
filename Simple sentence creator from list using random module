@@ -1,0 +1,34 @@
+###################
+   Python 2.7.12
+###################
+#Importing random module
+import random
+def story():
+	#Word bank
+	#elements of the story
+	begin = ["Once upon a time", "One day", "A sunny morning"]
+	names = ["Alison", "Alex", "Dexter"]
+	fill_words = ["and", "with"]
+	gender_words = ["his", "her"]
+	whom = ["friends", "squad", "family"]
+	action = ["hitting the gym", "going out for lunch"]
+	#Random number generator
+	#Creating variable
+	low = 0
+	mid = 1
+	high = 2
+	while True:
+		#wirting each argument on a new line for easier understanding
+		print(begin[random.randint(low, high)] +
+			  " " +
+			  names[random.randint(low, high)] +
+			  " " +
+			  fill_words[random.randint(low, mid)] +
+			  " " +
+			  gender_words[random.randint(low, mid)] +
+			  " " +
+			  whom[random.randint(low, mid)] +
+			  " were " +
+			  action[random.randint(low, mid)] + ".")
+		break
+story()
